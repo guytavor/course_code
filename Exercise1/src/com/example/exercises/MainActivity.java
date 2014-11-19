@@ -25,7 +25,8 @@ import android.widget.Toast;
 public class MainActivity extends ActionBarActivity {
 
 	
-    private ImageView imageView;
+    private static final String IMAGE_URL = "http://michaelguberti.com/wp-content/uploads/2014/08/dove_peace-5555px-300x249.png";
+	private ImageView imageView;
     
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +48,7 @@ public class MainActivity extends ActionBarActivity {
 
     private void onButtonClicked() {
 		if (!exitInCache()){
-			new DownloadImageTask().execute("http://michaelguberti.com/wp-content/uploads/2014/08/dove_peace-5555px-300x249.png");
+			new DownloadImageTask().execute(IMAGE_URL);
 		} else {
 			showImageViewFromCache();
 		}    	
