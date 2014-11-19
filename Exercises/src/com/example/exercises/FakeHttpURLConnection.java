@@ -1,4 +1,4 @@
-package com.example.coursecode;
+package com.example.exercises;
 
 /**
  * Fake HttpURLConnection for writing the cache exercise.
